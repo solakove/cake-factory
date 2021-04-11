@@ -19,6 +19,8 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     compile 'org.projectlombok:lombok:1.18.18'
     compile 'org.slf4j:slf4j-api:1.7.30'
+
+    compile 'net.sourceforge.htmlunit:htmlunit'
 }
 
 test {
