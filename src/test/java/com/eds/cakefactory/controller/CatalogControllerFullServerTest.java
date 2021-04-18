@@ -1,5 +1,6 @@
 package com.eds.cakefactory.controller;
 
+import com.eds.cakefactory.configuration.FlywayTestConfiguration;
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import org.junit.jupiter.api.AfterAll;
@@ -9,12 +10,14 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.web.server.LocalServerPort;
+import org.springframework.context.annotation.Import;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 
 //@WebMvcTest(CatalogController.class)
 @SpringBootTest(webEnvironment= SpringBootTest.WebEnvironment.RANDOM_PORT)
+@Import(FlywayTestConfiguration.class)
 class CatalogControllerFullServerTest {
 
     private static final WebClient webClient = new WebClient();

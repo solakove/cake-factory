@@ -13,11 +13,11 @@ import java.util.List;
 @Controller
 public class StartPageController {
 
-    @GetMapping("cakes")
+    @GetMapping("items")
     public String showStartPage(Model model) {
-        List<String> cakes = Arrays.asList("Muffin", "Cake");
+        List<String> items = Arrays.asList("Muffin", "Cake");
 
-        model.addAttribute("cakes", cakes);
+        model.addAttribute("items", items);
 
         return "index";
     }
